@@ -1,6 +1,6 @@
 Gem::Specification.new do |s|
   s.name = 'symbol_lookup'
-  s.version = '1.0.0'
+  s.version = '1.0.1'
   s.date = '2013-03-09'
   s.summary = 'Symbol[str]'
   s.description = 'A gemified version of the Symbol[str] method proposed in https://bugs.ruby-lang.org/issues/7854'
