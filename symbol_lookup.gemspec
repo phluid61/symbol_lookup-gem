@@ -9,7 +9,6 @@ Gem::Specification.new do |s|
 
   s.files = Dir.glob('lib/*.rb') + Dir.glob('ext/**/*.{c,h,rb}')
   s.extensions = ['ext/symbol_lookup/extconf.rb']
-  s.executables = ['symbol_lookup']
 
   s.homepage = 'http://rubygems.org/gems/symbol_lookup'
   s.license = 'Simplified BSD License'
