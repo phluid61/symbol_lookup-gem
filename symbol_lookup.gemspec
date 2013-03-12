@@ -1,10 +1,17 @@
 Gem::Specification.new do |s|
   s.name = 'symbol_lookup'
-  s.version = '1.0.4'
-  s.date = '2013-03-09'
+  s.version = '1.1.0'
+  s.date = '2013-03-12'
   s.required_ruby_version = '>= 2.0.0'
   s.summary = 'Symbol[str]'
-  s.description = 'A gemified version of the Symbol[str] method proposed in https://bugs.ruby-lang.org/issues/7854'
+  s.description = <<DESC
+A gemified version of the Symbol[str] method proposed in https://bugs.ruby-lang.org/issues/7854
+
+Version 1.1.0 defines:
+- Symbol[str]      => Symbol or nil
+- String#interned  => Symbol or nil
+- String#to_existing_sym => Symbol or exception
+DESC
   s.authors = ['Matthew Kerwin']
   s.email = 'matthew@kerwin.net.au'
 
