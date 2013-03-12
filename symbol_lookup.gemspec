@@ -8,7 +8,7 @@ Gem::Specification.new do |s|
   s.authors = ['Matthew Kerwin']
   s.email = 'matthew@kerwin.net.au'
 
-  s.files = Dir.glob('ext/symbol_lookup/SymbolLookup.c')
+  s.files = ['ext/symbol_lookup/SymbolLookup.c']
   s.extensions = ['ext/symbol_lookup/extconf.rb']
 
   s.homepage = 'http://rubygems.org/gems/symbol_lookup'
