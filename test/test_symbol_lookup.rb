@@ -10,6 +10,7 @@ Gem::Specification.reset
 
 puts '-'*70
 puts $:
+p $:
 
 puts '-'*70
 puts $:.map{|d| Dir.glob["#{d}/symbol_lookup.*"] }.flatten
