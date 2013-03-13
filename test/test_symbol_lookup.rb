@@ -4,19 +4,12 @@ $VERBOSE = true
 #require "#{File.dirname File.dirname(__FILE__)}/lib/symbol_lookup"
 
 puts '-'*70
-puts `gem list`
-
-puts '-'*70
-#name = /^/i
-#dep = Gem::Dependency.new(name, Gem::Requirement.default)
-#specs = Gem.source_index.search(dep)
-#puts specs.map{ |s| "#{s.name} #{s.version}" }
 Gem::Specification.all = nil
 puts Gem::Specification.map{|s| "#{s.name} #{s.version}" }
 Gem::Specification.reset
 
 puts '-'*70
-require "symbol_lookup" # gem must be installed!
+require 'symbol_lookup' # gem must be installed!
 
 class Test_symbol_lookup < Test::Unit::TestCase
 	def test_symbol_lookup_success
