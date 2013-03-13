@@ -23,7 +23,7 @@ sym_lookup(VALUE cls, VALUE str)
 
 /*
  *  call-seq:
- *     str.interned   -> symbol                                                                                                                             
+ *     str.interned   -> symbol
  *
  *  Returns the <code>Symbol</code> corresponding to <i>str</i>, returning
  *  nil if it did not previously exist.  See <code>Symbol[str]</code>.
