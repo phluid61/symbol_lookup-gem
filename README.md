@@ -23,3 +23,7 @@ Symbol['none such'] #=> nil
 'Object'.to_existing_sym #=> :Object
 'none such'.to_existing_sym #=> (raises ArgumentError)
 ```
+
+----
+
+[![Build Status](https://travis-ci.org/phluid61/symbol_lookup-gem.png)](https://travis-ci.org/phluid61/symbol_lookup-gem)
