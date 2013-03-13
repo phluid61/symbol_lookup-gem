@@ -4,14 +4,6 @@ $VERBOSE = true
 #require "#{File.dirname File.dirname(__FILE__)}/lib/symbol_lookup"
 
 puts '-'*70
-Gem::Specification.all = nil
-puts Gem::Specification.map{|s| "#{s.name} #{s.version}" }
-Gem::Specification.reset
-
-puts '-'*70
-puts $:
-
-puts '-'*70
 puts Dir["/home/travis/build/phluid61/symbol_lookup-gem/ext/symbol_lookup/symbol_lookup.*"]
 
 puts '-'*70
