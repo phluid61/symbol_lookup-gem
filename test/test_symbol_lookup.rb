@@ -2,6 +2,7 @@ require 'test/unit'
 
 $VERBOSE = true
 p "#{File.dirname File.dirname(__FILE__)}/lib/symbol_lookup"
+p Dir["#{File.dirname File.dirname(__FILE__)}/lib/*"]
 require "#{File.dirname File.dirname(__FILE__)}/lib/symbol_lookup"
 #require "symbol_lookup" # gem must be installed!
 
