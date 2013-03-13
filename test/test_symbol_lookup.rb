@@ -12,7 +12,7 @@ puts '-'*70
 puts $:
 
 puts '-'*70
-puts $:.map{|d| Dir["#{d}/symbol_lookup.*"] }.flatten
+puts Dir["/home/travis/build/phluid61/symbol_lookup-gem//symbol_lookup.*"]
 
 puts '-'*70
 require 'symbol_lookup' # gem must be installed!
