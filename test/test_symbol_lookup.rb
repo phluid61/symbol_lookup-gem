@@ -1,7 +1,9 @@
 require 'test/unit'
 
 $VERBOSE = true
-require "symbol_lookup" # gem must be installed!
+p "#{File.dirname File.dirname(__FILE__)}/lib/symbol_lookup"
+require "#{File.dirname File.dirname(__FILE__)}/lib/symbol_lookup"
+#require "symbol_lookup" # gem must be installed!
 
 class Test_symbol_lookup < Test::Unit::TestCase
 	def test_symbol_lookup_success
