@@ -9,6 +9,9 @@ puts Gem::Specification.map{|s| "#{s.name} #{s.version}" }
 Gem::Specification.reset
 
 puts '-'*70
+puts $:
+
+puts '-'*70
 require 'symbol_lookup' # gem must be installed!
 
 class Test_symbol_lookup < Test::Unit::TestCase
