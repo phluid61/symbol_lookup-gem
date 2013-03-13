@@ -12,6 +12,9 @@ puts '-'*70
 puts $:
 
 puts '-'*70
+puts $:.map{|d| Dir.glob["#{d}/symbol_lookup.*"] }.flatten
+
+puts '-'*70
 require 'symbol_lookup' # gem must be installed!
 
 class Test_symbol_lookup < Test::Unit::TestCase
