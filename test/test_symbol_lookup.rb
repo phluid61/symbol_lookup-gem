@@ -1,13 +1,8 @@
 require 'test/unit'
 
 $VERBOSE = true
-#require "#{File.dirname File.dirname(__FILE__)}/lib/symbol_lookup"
-
-puts '-'*70
-puts Dir["/home/travis/build/phluid61/symbol_lookup-gem/ext/symbol_lookup/symbol_lookup.*"]
-
-puts '-'*70
-require 'symbol_lookup' # gem must be installed!
+require "#{File.dirname File.dirname(__FILE__)}/lib/symbol_lookup"
+#require 'symbol_lookup' # gem must be installed!
 
 class Test_symbol_lookup < Test::Unit::TestCase
 	def test_symbol_lookup_success

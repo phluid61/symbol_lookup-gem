@@ -2,5 +2,6 @@ language: ruby
 rvm:
   - "2.0.0"
 before_install:
-  - gem build symbol_lookup.gemspec
-  - gem install symbol_lookup-*.gem
+  - cd ext/symbol_lookup && ruby extconf.rb && make && mv symbol_lookup.so ../../lib/ && cd ../..
+  #- gem build symbol_lookup.gemspec
+  #- gem install symbol_lookup-*.gem
