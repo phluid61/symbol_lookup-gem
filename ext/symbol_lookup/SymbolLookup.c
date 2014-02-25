@@ -33,8 +33,8 @@
   *  Returns an extant symbol, which is the .to_sym of +str+, or
   *  nil if no such symbol exists.
   *
-  *     Symbol.find 'Object' #=> :Object
-  *     Symbol.find 'none such' #=> nil
+  *     Symbol.find('Object') #=> :Object
+  *     Symbol.find('none such') #=> nil
   *     Symbol['Object'] #=> :Object
   *     Symbol['none such'] #=> nil
   */

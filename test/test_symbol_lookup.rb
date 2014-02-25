@@ -15,9 +15,9 @@ class Test_symbol_lookup < Test::Unit::TestCase
 			undef_str << 'X'
 		end
 
-		assert_equal( defined_sym, Symbol.find defined_str )
-		assert_equal( defined_sym, Symbol.find defined_sym )
-		assert_nil( Symbol.find undef_str )
+		assert_equal( defined_sym, Symbol.find(defined_str) )
+		assert_equal( defined_sym, Symbol.find(defined_sym) )
+		assert_nil( Symbol.find(undef_str) )
 
 		assert_equal( defined_sym, Symbol[defined_str] )
 		assert_equal( defined_sym, Symbol[defined_sym] )
@@ -25,9 +25,9 @@ class Test_symbol_lookup < Test::Unit::TestCase
 	end
 
 	def test_symbol_lookup_failure
-		assert_raise(TypeError) { Symbol.find 1 } # TypeError: 1 is not a symbol
+		assert_raise(TypeError) { Symbol.find(1) } # TypeError: 1 is not a symbol
 		assert_raise(ArgumentError) { Symbol.find  } # ArgumentError: wrong number of arguments (0 for 1)
-		assert_raise(ArgumentError) { Symbol.find 'a','b' } # ArgumentError: wrong number of arguments (2 for 1)
+		assert_raise(ArgumentError) { Symbol.find('a','b') } # ArgumentError: wrong number of arguments (2 for 1)
 
 		assert_raise(TypeError) { Symbol[1] } # TypeError: 1 is not a symbol
 		assert_raise(ArgumentError) { Symbol[] } # ArgumentError: wrong number of arguments (0 for 1)
