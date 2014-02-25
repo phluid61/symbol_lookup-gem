@@ -1,10 +1,10 @@
 Gem::Specification.new do |s|
   s.name = 'symbol_lookup'
-  s.version = '1.1.0'
-  s.date = '2013-03-12'
-  s.required_ruby_version = '>= 2.0.0'
-  s.summary = 'Symbol[str]'
-  s.description = 'A gemified version of the Symbol[str] method proposed in https://bugs.ruby-lang.org/issues/7854'
+  s.version = '1.2.0'
+  s.date = '2014-02-26'
+  s.required_ruby_version = '~> 2.0.0'
+  s.summary = 'Symbol.find'
+  s.description = 'A gemified version of the Symbol.find(str) method'
   s.authors = ['Matthew Kerwin']
   s.email = 'matthew@kerwin.net.au'
 
@@ -12,11 +12,11 @@ Gem::Specification.new do |s|
   s.extensions = ['ext/symbol_lookup/extconf.rb']
 
   s.homepage = 'http://rubygems.org/gems/symbol_lookup'
-  s.license = 'Simplified BSD License'
+  s.license = 'ISC'
 
   s.has_rdoc = true
   s.rdoc_options <<
-      '--title' << 'Symbol[]' <<
+      '--title' << 'Symbol.find' <<
       '--main' << 'Symbol' <<
       '--line-numbers' <<
       '--tab-width' << '2'

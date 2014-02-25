@@ -27,11 +27,14 @@
 
  /*
   *  call-seq:
+  *     Symbol.find str => Symbol or nil
   *     Symbol[str] => Symbol or nil
   *
   *  Returns an extant symbol, which is the .to_sym of +str+, or
   *  nil if no such symbol exists.
   *
+  *     Symbol.find 'Object' #=> :Object
+  *     Symbol.find 'none such' #=> nil
   *     Symbol['Object'] #=> :Object
   *     Symbol['none such'] #=> nil
   */
@@ -48,14 +51,14 @@ sym_lookup(VALUE cls, VALUE str)
 
 /*
  *  call-seq:
- *     str.interned   -> symbol
+ *     str.interned?  -> symbol
  *
  *  Returns the <code>Symbol</code> corresponding to <i>str</i>, returning
  *  nil if it did not previously exist.  See <code>Symbol[str]</code>.
  *
  *     x = :banana
- *     "banana".interned          #=> :banana
- *     "mango".interned           #=> nil
+ *     "banana".interned?         #=> :banana
+ *     "mango".interned?          #=> nil
  *
  */
 
@@ -68,6 +71,18 @@ str_interned(VALUE str)
         return ID2SYM(id);
     }
     return Qnil;
+}
+VALUE
+str_interned_dep(VALUE str)
+{
+	rb_warn("String#interned is deprecated; use #interned? instead");
+	return str_interned(str);
+}
+VALUE
+sym_interned_dep(VALUE sym)
+{
+	rb_warn("Symbol#interned is deprecated; use #interned? instead");
+	return sym;
 }
 
 /*
@@ -99,9 +114,12 @@ str_to_existing_sym(VALUE str)
 
 void Init_symbol_lookup() {
     rb_define_singleton_method(rb_cSymbol, "[]", sym_lookup, 1);
-    rb_define_alias(rb_cSymbol, "interned", "intern");
+    rb_define_singleton_method(rb_cSymbol, "find", sym_lookup, 1);
+    rb_define_method(rb_cSymbol, "interned", sym_interned_dep, 0);
+    rb_define_alias(rb_cSymbol, "interned?", "intern");
     rb_define_alias(rb_cSymbol, "to_existing_sym", "to_sym");
 
-    rb_define_method(rb_cString, "interned", str_interned, 0);
+    rb_define_method(rb_cString, "interned", str_interned_dep, 0);
+    rb_define_method(rb_cString, "interned?", str_interned, 0);
     rb_define_method(rb_cString, "to_existing_sym", str_to_existing_sym, 0);
 }
