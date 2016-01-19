@@ -29,4 +29,5 @@ Symbol['none such'] #=> nil
 
 ----
 
-[![Build Status](https://travis-ci.org/phluid61/symbol_lookup-gem.png)](https://travis-ci.org/phluid61/symbol_lookup-gem)
+* [Contributor Code of Conduct](code_of_conduct.md)
+* [![Build Status](https://travis-ci.org/phluid61/symbol_lookup-gem.png)](https://travis-ci.org/phluid61/symbol_lookup-gem)
