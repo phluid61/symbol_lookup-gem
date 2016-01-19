@@ -5,4 +5,4 @@ rvm:
   - "2.1.8"
   - "2.0.0"
 before_install:
-  - cd ext/symbol_lookup && ruby extconf.rb && make && mv symbol_lookup.so ../../lib/ && cd ../..
+  - cd ext/symbol_lookup && ruby extconf.rb && make && cp symbol_lookup.so ../../lib/ && cd ../..
