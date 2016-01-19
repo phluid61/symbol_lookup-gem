@@ -6,3 +6,4 @@ rvm:
   - "2.0.0"
 before_install:
   - cd ext/symbol_lookup && ruby extconf.rb && make && cp symbol_lookup.so ../../lib/ && cd ../..
+script: "bundle exec rake test"
