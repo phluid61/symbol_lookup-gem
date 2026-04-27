@@ -1,0 +1,44 @@
+---
+layout: default
+title: "Symbol Lookup Gem"
+---
+<h1>Symbol Lookup Gem</h1>
+<p>A gemified version of the <code>Symbol[str]</code> method proposed in https://bugs.ruby-lang.org/issues/7854</p>
+<pre><code> call-seq:
+    Symbol.find str =&gt; Symbol or nil
+    Symbol[str]   =&gt; Symbol or nil
+    str.interned? =&gt; Symbol or nil
+    str.to_existing_sym =&gt; Symbol or ArgumentError
+</code></pre>
+<p>Returns an extant symbol, which is the <code>.to_sym</code> of <em>str</em>, or
+nil if no such symbol exists.</p>
+<pre><code class="language-ruby">Symbol.find 'Object' #=&gt; :Object
+Symbol.find 'none such' #=&gt; nil
+Symbol['Object'] #=&gt; :Object
+Symbol['none such'] #=&gt; nil
+
+'Object'.interned? #=&gt; :Object
+'none such'.interned? #=&gt; nil
+
+'Object'.to_existing_sym #=&gt; :Object
+'none such'.to_existing_sym #=&gt; (raises ArgumentError)
+</code></pre>
+<hr />
+<ul>
+<li><a href="code_of_conduct.html">Contributor Code of Conduct</a></li>
+<li><a href="https://travis-ci.org/phluid61/symbol_lookup-gem"><img src="https://travis-ci.org/phluid61/symbol_lookup-gem.png" alt="Build Status" /></a></li>
+</ul>
+<pre id="license" class="no-highlight">Copyright (c) 2013,2014, Matthew Kerwin &lt;matthew@kerwin.net.au&gt;
+
+Permission to use, copy, modify, and/or distribute this software for any
+purpose with or without fee is hereby granted, provided that the above
+copyright notice and this permission notice appear in all copies.
+
+THE SOFTWARE IS PROVIDED &quot;AS IS&quot; AND THE AUTHOR DISCLAIMS ALL WARRANTIES
+WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF
+MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR
+ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES
+WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN
+ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF
+OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
+</pre>
