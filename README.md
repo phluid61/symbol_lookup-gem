@@ -1,6 +1,9 @@
 Symbol Lookup Gem
 =================
 
+[![Gem Version](https://badge.fury.io/rb/symbol_lookup.png)](http://badge.fury.io/rb/symbol_lookup)
+[![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-v3.0%20adopted-ff69b4.svg)](code_of_conduct.md)
+
 A gemified version of the `Symbol[str]` method proposed in https://bugs.ruby-lang.org/issues/7854
 
 ```
