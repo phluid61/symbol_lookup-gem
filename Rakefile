@@ -5,6 +5,7 @@ task :default => %i[build test]
 Rake::TestTask.new do |tt|
 	tt.verbose = true
 end
+task :test => :build
 
 task :build => %w[lib/symbol_lookup.so]
 file 'lib/symbol_lookup.so' => 'ext/symbol_lookup/symbol_lookup.so' do |t|
