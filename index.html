@@ -2,27 +2,29 @@
 layout: default
 title: "Symbol Lookup Gem"
 ---
-<h1>Symbol Lookup Gem</h1>
-<p>A gemified version of the <code>Symbol[str]</code> method proposed in https://bugs.ruby-lang.org/issues/7854</p>
-<pre><code> call-seq:
-    Symbol.find str =&gt; Symbol or nil
-    Symbol[str]   =&gt; Symbol or nil
-    str.interned? =&gt; Symbol or nil
-    str.to_existing_sym =&gt; Symbol or ArgumentError
-</code></pre>
+<h1><a href="#symbol-lookup-gem" aria-hidden="true" class="anchor" id="symbol-lookup-gem"></a>Symbol Lookup Gem</h1>
+<p><a href="http://badge.fury.io/rb/symbol_lookup"><img src="https://badge.fury.io/rb/symbol_lookup.png" alt="Gem Version" /></a>
+<a href="code_of_conduct.html"><img src="https://img.shields.io/badge/Contributor%20Covenant-v3.0%20adopted-ff69b4.svg" alt="Contributor Covenant" /></a></p>
+<p>A gemified version of the <code>Symbol[str]</code> method proposed in <a href="https://bugs.ruby-lang.org/issues/7854">https://bugs.ruby-lang.org/issues/7854</a></p>
+<pre style="background-color:#2b303b;"><code><span style="color:#c0c5ce;"> call-seq:
+</span><span style="color:#c0c5ce;">    Symbol.find str =&gt; Symbol or nil
+</span><span style="color:#c0c5ce;">    Symbol[str]   =&gt; Symbol or nil
+</span><span style="color:#c0c5ce;">    str.interned? =&gt; Symbol or nil
+</span><span style="color:#c0c5ce;">    str.to_existing_sym =&gt; Symbol or ArgumentError
+</span></code></pre>
 <p>Returns an extant symbol, which is the <code>.to_sym</code> of <em>str</em>, or
 nil if no such symbol exists.</p>
-<pre><code class="language-ruby">Symbol.find 'Object' #=&gt; :Object
-Symbol.find 'none such' #=&gt; nil
-Symbol['Object'] #=&gt; :Object
-Symbol['none such'] #=&gt; nil
-
-'Object'.interned? #=&gt; :Object
-'none such'.interned? #=&gt; nil
-
-'Object'.to_existing_sym #=&gt; :Object
-'none such'.to_existing_sym #=&gt; (raises ArgumentError)
-</code></pre>
+<pre lang="ruby" style="background-color:#2b303b;"><code><span style="color:#ebcb8b;">Symbol</span><span style="color:#c0c5ce;">.find &#39;</span><span style="color:#a3be8c;">Object</span><span style="color:#c0c5ce;">&#39; </span><span style="color:#65737e;">#=&gt; :Object
+</span><span style="color:#ebcb8b;">Symbol</span><span style="color:#c0c5ce;">.find &#39;</span><span style="color:#a3be8c;">none such</span><span style="color:#c0c5ce;">&#39; </span><span style="color:#65737e;">#=&gt; nil
+</span><span style="color:#ebcb8b;">Symbol</span><span style="color:#c0c5ce;">[&#39;</span><span style="color:#a3be8c;">Object</span><span style="color:#c0c5ce;">&#39;] </span><span style="color:#65737e;">#=&gt; :Object
+</span><span style="color:#ebcb8b;">Symbol</span><span style="color:#c0c5ce;">[&#39;</span><span style="color:#a3be8c;">none such</span><span style="color:#c0c5ce;">&#39;] </span><span style="color:#65737e;">#=&gt; nil
+</span><span style="color:#c0c5ce;">
+</span><span style="color:#c0c5ce;">&#39;</span><span style="color:#a3be8c;">Object</span><span style="color:#c0c5ce;">&#39;.interned? </span><span style="color:#65737e;">#=&gt; :Object
+</span><span style="color:#c0c5ce;">&#39;</span><span style="color:#a3be8c;">none such</span><span style="color:#c0c5ce;">&#39;.interned? </span><span style="color:#65737e;">#=&gt; nil
+</span><span style="color:#c0c5ce;">
+</span><span style="color:#c0c5ce;">&#39;</span><span style="color:#a3be8c;">Object</span><span style="color:#c0c5ce;">&#39;.to_existing_sym </span><span style="color:#65737e;">#=&gt; :Object
+</span><span style="color:#c0c5ce;">&#39;</span><span style="color:#a3be8c;">none such</span><span style="color:#c0c5ce;">&#39;.to_existing_sym </span><span style="color:#65737e;">#=&gt; (raises ArgumentError)
+</span></code></pre>
 <hr />
 <ul>
 <li><a href="code_of_conduct.html">Contributor Code of Conduct</a></li>
