@@ -1,3 +1,9 @@
-Makefile
+*.gem
 *.o
 *.so
+.bundle/
+Gemfile.lock
+Makefile
+pkg/
+tmp/
+vendor/
