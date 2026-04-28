@@ -30,7 +30,17 @@ Symbol['none such'] #=> nil
 'none such'.to_existing_sym #=> (raises ArgumentError)
 ```
 
-----
+## Contributor Code of Conduct
 
-* [Contributor Code of Conduct](code_of_conduct.md)
-* [![Build Status](https://travis-ci.org/phluid61/symbol_lookup-gem.png)](https://travis-ci.org/phluid61/symbol_lookup-gem)
+This repository is subject to a [Contributor Code of Conduct](code_of_conduct.md)
+adapted from the [Contributor Covenant][cc], version 3.0, available at
+<https://www.contributor-covenant.org/version/3/0/>
+
+
+[cc]: https://www.contributor-covenant.org
+
+
+## Licence
+
+This project is licensed under the ISC licence. See [LICENSE](LICENSE)
+for details
